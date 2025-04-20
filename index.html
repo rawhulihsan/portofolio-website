@@ -1,67 +1,338 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Portofolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Rawhul Ihsan</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome untuk icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-<header>
-    <h1>Brand</h1>
-    <nav>
-        <a href="#header">Header</a>
-        <a href="#biodata">Biodata</a>
-        <a href="#portofolio">Portofolio</a>
-    </nav>
-</header>
-
-<section id="header" class="section hero">
-    <div>
-        <h2>Selamat Datang di Website Saya</h2>
-        <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
-        <button onclick="window.location.href='#biodata'">Pelajari Lebih Lanjut</button>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <!-- <img src="image/logo.png" alt="Logo" height="32" class="me-2"> -->
+        Rawhul Ihsan
+      </a>
+      <!-- Toggler offcanvas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menu desktop -->
+      <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Download CV CTA -->
+      <a href="cv.pdf" class="btn btn-warning d-none d-lg-block">Download CV</a>
     </div>
-    <div>
-        <img src="image/banner.png" alt="Header Image">
-    </div>
-</section>
+  </nav>
 
-<section id="biodata" class="section">
-    <h2 class="section-title">About Me</h2>
-    <p class="section-subtitle">A brief introduction about myself</p>
-    <div class="biodata">
-        <div><b>Full Name:</b> Rawhul Ihsan</div>
-        <div><b>Education:</b> S1 Bisnis Digital</div>
-        <div><b>Pekerjaan:</b> Programmer</div>
-        <div><b>Contact:</b> rawhulihsn@gmail.com</div>
-        <div><b>Hobi:</b> Membaca, Coding</div>
-        <div><b>Alamat:</b> Medan, Indonesia</div>
+  <!-- Offcanvas Mobile Nav & Sidebar -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
-</section>
-
-<section id="portofolio" class="section">
-    <h2 class="section-title">Portofolio</h2>
-    <div class="portofolio-items">
-        <div>
-            <img src="image/banner_portofolio.png" alt="Proyek 1">
-            <p><b>Proyek 1</b><br>Deskripsi proyek 1.</p>
+    <div class="offcanvas-body">
+      <!-- Nav links -->
+      <ul class="nav flex-column mb-4">
+        <li class="nav-item"><a class="nav-link" href="#hero" data-bs-dismiss="offcanvas">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about" data-bs-dismiss="offcanvas">About me</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services" data-bs-dismiss="offcanvas">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects" data-bs-dismiss="offcanvas">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials" data-bs-dismiss="offcanvas">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact" data-bs-dismiss="offcanvas">Contact</a></li>
+      </ul>
+      <!-- Hero summary -->
+      <div class="text-center mb-4">
+        <small class="text-secondary">Hi, I am</small>
+        <h5 class="fw-bold mb-1">Rawhul Ihsan</h5>
+        <p class="h6 text-warning mb-3">Web Developer</p>
+        <img src="image/banner.png" alt="Foto Saya" class="img-fluid rounded-circle mb-3" style="width:120px; border:4px solid #ff9800;">
+        <p class="small text-secondary px-2">Helping brands stand out with powerful, professional websites.</p>
+      </div>
+      <!-- About me icons -->
+      <div class="mb-4">
+        <h6 class="fw-bold">About Me</h6>
+        <div class="d-flex flex-wrap justify-content-between">
+          <div class="text-center mb-3" style="width:48%;">
+            <i class="fas fa-user fa-lg text-warning mb-1"></i><br>
+            <small>Rawhul Ihsan</small>
+          </div>
+          <div class="text-center mb-3" style="width:48%;">
+            <i class="fas fa-graduation-cap fa-lg text-warning mb-1"></i><br>
+            <small>Bachelor’s Degree in Digital Business</small>
+          </div>
+          <div class="text-center mb-3" style="width:48%;">
+            <i class="fas fa-briefcase fa-lg text-warning mb-1"></i><br>
+            <small>Programmer</small>
+          </div>
+          <div class="text-center mb-3" style="width:48%;">
+            <i class="fas fa-envelope fa-lg text-warning mb-1"></i><br>
+            <small>rawhulihsn@gmail.com</small>
+          </div>
+          <div class="text-center mb-3" style="width:48%;">
+            <i class="fas fa-heart fa-lg text-warning mb-1"></i><br>
+            <small>Membaca, Coding</small>
+          </div>
+          <div class="text-center mb-3" style="width:48%;">
+            <i class="fas fa-home fa-lg text-warning mb-1"></i><br>
+            <small>Medan, Indonesia</small>
+          </div>
         </div>
-        <div>
-            <img src="image/banner_portofolio.png" alt="Proyek 2">
-            <p><b>Proyek 2</b><br>Deskripsi proyek 2.</p>
+      </div>
+      <!-- Services icons -->
+      <div>
+        <h6 class="fw-bold">Services</h6>
+        <div class="d-flex flex-column gap-3">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-code fa-lg text-warning me-2"></i><small>Web Development</small>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="fas fa-mobile-alt fa-lg text-warning me-2"></i><small>App Development</small>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="fas fa-paint-brush fa-lg text-warning me-2"></i><small>Web Design</small>
+          </div>
         </div>
-        <div>
-            <img src="image/banner_portofolio.png" alt="Proyek 3">
-            <p><b>Proyek 3</b><br>Deskripsi proyek 3.</p>
-        </div>
+      </div>
     </div>
-</section>
+  </div>
 
-<footer>
-    &copy; 2025 Rawhul Ihsan. All rights reserved.
-</footer>
 
+  <!-- HERO -->
+  <section id="hero" class="pt-5 mt-5">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <!-- Teks -->
+        <div class="col-lg-6 text-center text-lg-start">
+          <small class="text-secondary">Hi, I am</small>
+          <h1 class="display-5 mb-2">Rawhul <span class="text-warning">Ihsan</span></h1>
+          <h2 class="h1 fw-bold mb-3">Web Developer</h2>
+          <p class="mb-4 text-secondary">Helping brands stand out with powerful, professional websites.</p>
+          <button class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#hireModal">Hire Me</button>
+          <a href="#about" class="btn btn-outline-secondary">About Me</a>
+        </div>
+        <!-- Gambar & sosial -->
+        <div class="col-lg-6 text-center">
+          <div class="hero-img mx-auto mb-3" style="width:300px;">
+            <img src="image/banner.png" alt="Foto Saya" class="img-fluid rounded-circle border border-5 border-warning">
+          </div>
+          <div>
+            <a href="#" class="text-secondary me-3 fs-4"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-secondary me-3 fs-4"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/rawhulihsan" class="text-secondary me-3 fs-4"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rawhulihsan/" class="text-secondary fs-4"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">About Me</h2>
+      <p class="text-center text-secondary mb-5">A passionate Web Developer who loves building clean and functional websites</p>
+      <div class="row g-4">
+        <!-- kartu info -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="d-flex align-items-center p-3 bg-light rounded shadow-sm">
+            <i class="fas fa-user fa-2x text-warning me-3"></i>
+            <div>
+              <h6 class="mb-0">Full Name</h6>
+              <small>Rawhul Ihsan</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="d-flex align-items-center p-3 bg-light rounded shadow-sm">
+            <i class="fas fa-graduation-cap fa-2x text-warning me-3"></i>
+            <div>
+              <h6 class="mb-0">Education</h6>
+              <small>Bachelor’s Degree in Digital Business</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="d-flex align-items-center p-3 bg-light rounded shadow-sm">
+            <i class="fas fa-briefcase fa-2x text-warning me-3"></i>
+            <div>
+              <h6 class="mb-0">Job</h6>
+              <small>Programmer</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="d-flex align-items-center p-3 bg-light rounded shadow-sm">
+            <i class="fas fa-envelope fa-2x text-warning me-3"></i>
+            <div>
+              <h6 class="mb-0">Contact</h6>
+              <small>rawhulihsn@gmail.com</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="d-flex align-items-center p-3 bg-light rounded shadow-sm">
+            <i class="fas fa-heart fa-2x text-warning me-3"></i>
+            <div>
+              <h6 class="mb-0">Hobbies</h6>
+              <small>Reading, Coding</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="d-flex align-items-center p-3 bg-light rounded shadow-sm">
+            <i class="fas fa-home fa-2x text-warning me-3"></i>
+            <div>
+              <h6 class="mb-0">Address</h6>
+              <small>Medan, Indonesia</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Services</h2>
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="card border-0 shadow-sm text-center p-4">
+            <i class="fas fa-code fa-3x text-warning mb-3"></i>
+            <h5>Web Development</h5>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="card border-0 shadow-sm text-center p-4">
+            <i class="fas fa-mobile-alt fa-3x text-warning mb-3"></i>
+            <h5>App Development</h5>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="card border-0 shadow-sm text-center p-4">
+            <i class="fas fa-paint-brush fa-3x text-warning mb-3"></i>
+            <h5>Web Design</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS (Carousel) -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-3">My Projects</h2>
+      <p class="text-center text-secondary mb-4">Take a look at what I’ve been building lately.</p>
+
+      <!-- filter -->
+      <div class="d-flex justify-content-center gap-2 mb-4 flex-wrap">
+        <button class="btn btn-outline-secondary">All</button>
+        <button class="btn btn-outline-secondary">UI/UX</button>
+        <button class="btn btn-warning">Web Design</button>
+        <button class="btn btn-outline-secondary">App Design</button>
+        <button class="btn btn-outline-secondary">Graphic Design</button>
+      </div>
+
+      <!-- carousel -->
+      <div id="projCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center">
+            <img src="image/project1.png" class="img-fluid rounded" alt="Project 1">
+            <p class="mt-3"><strong>AirCrafting Landing Page Design</strong></p>
+          </div>
+          <div class="carousel-item text-center">
+            <img src="image/project2.png" class="img-fluid rounded" alt="Project 2">
+            <p class="mt-3"><strong>Business Landing Page Design</strong></p>
+          </div>
+          <div class="carousel-item text-center">
+            <img src="image/project3.png" class="img-fluid rounded" alt="Project 3">
+            <p class="mt-3"><strong>E‑com Web Page Design</strong></p>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#projCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TESTIMONIALS (placeholder) -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Testimonials</h2>
+      <p class="text-secondary">“Coming soon…”</p>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Contact</h2>
+      <p class="text-secondary mb-4">Silakan kirim pesan melalui form di bawah.</p>
+      <form class="mx-auto" style="max-width:400px;">
+        <input type="email" class="form-control mb-3" placeholder="Email Anda">
+        <textarea class="form-control mb-3" rows="4" placeholder="Pesan Anda"></textarea>
+        <button class="btn btn-warning w-100">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="py-3 bg-white text-center">
+    <small class="text-secondary">&copy; 2025 Rawhul Ihsan. All rights reserved.</small>
+  </footer>
+
+
+  <!-- MODAL HIRE ME -->
+  <div class="modal fade" id="hireModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Hire Me</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Hubungi saya di <strong>rawhulihsn@gmail.com</strong> atau isi formulir:</p>
+          <input type="email" class="form-control mb-2" placeholder="Email Anda">
+          <textarea class="form-control mb-2" rows="3" placeholder="Pesan Anda"></textarea>
+          <button class="btn btn-primary w-100">Kirim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
